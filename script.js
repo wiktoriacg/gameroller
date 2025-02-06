@@ -12,12 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const badMessages = [
         "You've hit your companion! The dragon gained more points from laughing",
         "Oh no, the beast started summoning wyverns!",
-        "The beast began to breathe fire. We can say goodbye to the forest"
+        "The beast began to breathe fire. We can say goodbye to the forest",
+        "The dragon's claws turned out to be more dangerous than you expected!",
+        "One of your companions ran away, arguing that you weren't paying him enough."
     ];
     const goodMessages = [
         "Good bow shot! The dragon cannot fly for a while",
         "Your companion turned out to be a magician. The dragon lost his confidence",
-        "Perfect attack! Even the dragon is surprised"
+        "Perfect attack! Even the dragon is surprised",
+        "The dagger you bought years ago was finally useful!",
+        "One of the villagers turned out to be a musician. The dragon has lost its rhythm!"
     ];
     function rollDice() {
         const roll = Math.floor(Math.random() * 6) + 1;
@@ -26,11 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
             hp += 10;
             const randomMessage = badMessages[Math.floor(Math.random() * badMessages.length)];
             messageElement.textContent = randomMessage;
-        }
-        if(roll == 6){
+        }else if(roll == 6){
             hp -= 5;
             const randomMessage = goodMessages[Math.floor(Math.random() * goodMessages.length)];
             messageElement.textContent = randomMessage;
+        }else{
+            messageElement.textContent = "";
         }
         totalScore += roll;
         //aktualizowanie wyników
