@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Dice Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="info-bar">
+        <p>You are the last hope of this village. For months, the dragon has been terrorizing a nearby settlement. Villagers need help. Are you able to help them?</p>
+    </div>
+    <div class="instructions">
+        <p><strong>Instructions:</strong></p>
+        <ul>
+            <li>If the total score is bigger than Dragon HP, the dragon is defeated.</li>
+            <li>Each 1 rolled gives the dragon 10 more HP</li>
+            <li>Each 6 you roll is 5 points less HP for the dragon</li>
+        </ul>
+    </div>
+    <div class="game-container">
+        <h1>Dragon Dice Game</h1>
+        <p>Roll the dice to defeat the dragon! </p>
+        <div id="dragon" class="dragon alive"></div>
+        <div class="score-container">
+            <p>Total Score: <span id="total-score">0</span></p>
+            <p>Dragon HP: <span id="dragon-hp">100</span></p>
+        </div>
+    
+
+        <p id="message" style="color: rgb(0, 0, 0); font-weight: bold;"></p>
+        <button id="roll" autofocus>Roll Dice</button>
+        <p>Last Roll: <span id="last-roll">-</span></p>
+    </div>
+</body>
+</html>

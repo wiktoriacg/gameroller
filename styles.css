@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url('village.jpg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; /
+}
+
+.info-bar {
+    background-color: #218838;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.instructions {
+    position: fixed;
+    top: 100px; /* Aby instrukcje nie nachodziły na pasek info-bar */
+    left: 10px; /* Odstęp od lewej strony */
+    width: 200px; /* Szerokość instrukcji */
+    padding: 15px;
+    background-color: #f0f8ff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+}
+
+.instructions p {
+    font-weight: bold;
+}
+
+.instructions ul {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 5px;
+}
+
+.game-container {
+    margin: 150px auto; /* Zwiększono margines, aby uwzględnić pasek u góry */
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.dragon {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    background-image: url('dragon-alive.png');
+    background-size: cover;
+}
+
+.dragon.defeated {
+    background-image: url('dragon-defeated.png');
+}
+
+.score-container p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#message {
+    font-size: 18px;
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+}
