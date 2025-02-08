@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
     function rollDice() {
         const roll = Math.floor(Math.random() * 6) + 1;
-        //przypisuje rozne wartosci dla rzutu kostka
         const rotations = {
             1: "rotateX(0deg) rotateY(0deg)",     
             2: "rotateX(90deg) rotateY(0deg)",    
@@ -38,12 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
             5: "rotateX(-90deg) rotateY(0deg)",   
             6: "rotateX(180deg) rotateY(0deg)"    
         };
-        //wplywa ile razy kostka sie obroci wokół wlasnej osi
-        //wybierane losowo - 0°, 360°, 720°, 1080°
+        //it choosing how many turns will have dice 
+        //and in which direction
+        //choose random - 0°, 360°, 720°, 1080°
         let extraX = Math.floor(Math.random() * 4) * 360;
         let extraY = Math.floor(Math.random() * 4) * 360;
 
-        //daje odpowiednia sciene na podstawie rzutu kostka
+        //give backgroung to each face
         diceElement.style.transform = `rotateX(${extraX}deg) rotateY(${extraY}deg) ${rotations[roll]}`;
 
         const faces = ['front', 'back', 'left', 'right', 'top', 'bottom'];
@@ -64,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
             messageElement.textContent = "";
         }
         totalScore += roll;
-        //aktualizowanie wyników
-        totalScoreElement.textContent = totalScore;
-        dragonHpElement.textContent = hp;
+        //changing results
+        totalScoreElement.value = totalScore;
+        dragonHpElement.value = hp;
         console.log(`Total Score: ${hp}`);
         
         if (totalScore > hp) {

@@ -9,8 +9,7 @@ body {
     background-position: center center; 
     background-attachment: fixed; /
 }
-/*fixed - stała position at the top
-top- zawsze zaczyna od gory*/
+/*fixed - stala position at the top*/
 .info-bar {
     background-color: #218838;
     color: #fff;
@@ -72,9 +71,22 @@ top- zawsze zaczyna od gory*/
 }
 
 .score-container p {
+    
     font-size: 18px;
     margin: 5px 0;
 }
+.score-container p {
+    text-align: right;
+}
+input[readonly] {
+    border: none;
+    background: transparent;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    width: 30px;
+}
+
 
 button {
     padding: 10px 20px;
@@ -98,10 +110,10 @@ button:hover {
     font-weight: bold;
 }
 .scene {
-    width: 80px; /* Zmniejszenie rozmiaru sceny */
+    width: 80px; 
     height: 80px;
     perspective: 600px;
-    margin: 20px auto;
+    margin: 35px auto;
 }
 
 .cube {
