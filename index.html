@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<!-- Top bar/ Introductory -->
     <div class="info-bar">
         <p>You are the last hope of this village. For months, the dragon has been terrorizing a nearby settlement. Villagers need help. Are you able to help them?</p>
     </div>
@@ -31,8 +32,18 @@
     
 
         <p id="message" style="color: rgb(0, 0, 0); font-weight: bold;"></p>
+        <!-- Automatic focus setting after loading -->
         <button id="roll" autofocus>Roll Dice</button>
-        <p>Last Roll: <span id="last-roll">-</span></p>
+        <div class="scene">
+            <div class="cube" id="dice">
+                <div class="face front"></div>
+                <div class="face back"></div>
+                <div class="face left"></div>
+                <div class="face right"></div>
+                <div class="face top"></div>
+                <div class="face bottom"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

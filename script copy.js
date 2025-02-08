@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let totalScore = 0;
     let hp = 100;
+    
 
     const badMessages = [
         "You've hit your companion! The dragon gained more points from laughing",
@@ -50,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const images = ['1.jpg', '6.jpg', '4.jpg', '3.jpg', '5.jpg', '2.jpg'];
             faces.forEach((face, index) => {
                 document.querySelector(`.${face}`).style.backgroundImage = `url('${images[index]}')`;
-            });        
+            });
+        
         console.log(`Rolling the dice: ${roll}`); 
         if(roll == 1){
             hp += 10;
@@ -69,6 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
         dragonHpElement.textContent = hp;
         console.log(`Total Score: ${hp}`);
         
+    
+    
         if (totalScore > hp) {
             dragonElement.classList.add("defeated");
             messageElement.textContent = "The village is safe!... at least until another dragon appears"; 
